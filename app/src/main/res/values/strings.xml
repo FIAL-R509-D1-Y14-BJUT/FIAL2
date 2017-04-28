@@ -14,4 +14,11 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <!-- Strings related to shop -->
+    <string name="shop">"商店"</string>
+    <string name="button_buy">点击领养</string>
+    <string name="button_back">返回</string>
+
+
 </resources>

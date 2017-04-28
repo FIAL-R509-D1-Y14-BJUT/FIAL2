@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!-- default use -->
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorPrimary">#ffd513</color>
+    <color name="colorPrimaryDark">#ceab0b</color>
+    <color name="colorAccent">#ff4081</color>
     <color name="colorTransparent">#00000000</color>
     <color name="colorDark">#000000</color>
+
+    <!-- shop use-->
+    <color name="colorAllBackGround">#f1f1f1</color>
+    <color name="shop_ZIUOLAN_back1">#f0ebf7</color>
+    <color name="shop_ZIUOLAN_back2">#ebe4f7</color>
+    <color name="shop_button_selected">#f9f9f9</color>
+    <color name="button_text">#373535</color>
+    <color name="primary_text_material_light">#000000</color>
+    <color name="primary_text_material_dark">#000000</color>
+
 </resources>
