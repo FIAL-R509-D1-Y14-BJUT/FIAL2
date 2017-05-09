@@ -1,3 +1,12 @@
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
 /*
 !/app/
 /app/*
@@ -5,11 +14,3 @@
 /app/src/*
 !/app/src/main/
 !/.gitignore
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
