@@ -9,12 +9,12 @@
     <color name="colorDark">#000000</color>
 
     <!-- shop use-->
-    <color name="colorAllBackGround">#f1f1f1</color>
+    <color name="shop_colorAllBackGround">#f1f1f1</color>
     <color name="shop_ZIUOLAN_back1">#f0ebf7</color>
     <color name="shop_ZIUOLAN_back2">#ebe4f7</color>
     <color name="shop_button_selected">#f9f9f9</color>
-    <color name="button_text">#373535</color>
-    <color name="primary_text_material_light">#000000</color>
-    <color name="primary_text_material_dark">#000000</color>
+    <color name="shop_button_text">#373535</color>
+    <color name="shop_primary_text_material_light">#000000</color>
+    <color name="shop_primary_text_material_dark">#000000</color>
 
 </resources>

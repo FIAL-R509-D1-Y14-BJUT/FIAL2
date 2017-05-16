@@ -11,59 +11,13 @@
     tools:context="com.example.administrator.lvf_10.Shop"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/colorAllBackGround">
+    android:background="@color/shop_colorAllBackGround">
 
-    <LinearLayout
-        android:padding="3dp"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/shop_ZIUOLAN_back1">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@color/shop_ZIUOLAN_back2"
-            android:gravity="center_horizontal">
-
-            <ImageView
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginEnd="11dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/shop_pic_ziluolan"
-                android:id="@+id/imageView4" />
-
-            <ImageView
-                android:layout_marginTop="37dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/shop_text_ziluolan"
-                android:id="@+id/imageView5" />
-
-            <ImageView
-                android:layout_marginTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/shop_text_9"
-                android:id="@+id/imageView6" />
-
-            <Button
-                android:layout_marginTop="16dp"
-                android:text="@string/button_buy"
-                android:textColor="@color/button_text"
-                android:textSize="14sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="120dp"
-                android:height="40dp"
-                android:background="@drawable/radius_button_2dp_xml"
-                style="?android:attr/borderlessButtonStyle"
-                android:id="@+id/button7" />
-        </LinearLayout>
-    </LinearLayout>
+    <ViewSwitcher
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/shop_viewSwitcher"
+    />
 
     <LinearLayout
         android:layout_marginTop="17dp"
@@ -75,15 +29,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/shop_icon_navdot_selected"
-            android:id="@+id/imageButton9"
+            android:id="@+id/imageButton_doc_selected"
+            android:onClick="prev"
             android:layout_weight="1" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/shop_icon_navdot_unselected"
-            android:id="@+id/imageButton"
+            android:id="@+id/imageButton_doc_default"
+            android:onClick="next"
             android:layout_weight="1" />
     </LinearLayout>
+
 
 </LinearLayout>
