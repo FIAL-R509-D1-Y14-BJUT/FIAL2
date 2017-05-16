@@ -14,11 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".LoginActivity"
@@ -29,9 +25,17 @@
         <activity android:name=".IndividualsAndSetting" />
         <activity android:name=".Money" />
         <activity android:name=".Individuals" />
-        <activity android:name=".Shop" />
         <activity android:name=".Goods" />
-        <activity android:name=".Lifecycle"></activity>
+        <activity android:name=".Lifecycle"/>
+        <activity android:name=".Shop"
+            android:label="商店"
+            android:theme="@style/Theme_shop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

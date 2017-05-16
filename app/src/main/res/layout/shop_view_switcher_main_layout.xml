@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="3dp"
+    android:layout_weight="1"
+    android:layout_width="wrap_content"
+    android:background="@color/shop_ZIUOLAN_back1"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:id="@+id/shop_main_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="20dp"
+        android:orientation="vertical"
+        android:background="@color/shop_ZIUOLAN_back2"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="11dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shop_pic_ziluolan"
+            android:id="@+id/imageView_ZILUOLAN1" />
+
+        <ImageView
+            android:layout_marginTop="37dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shop_text_ziluolan"
+            android:id="@+id/imageView_ZILUOLAN2" />
+
+        <ImageView
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shop_text_9"
+            android:id="@+id/imageView_ZILUOLAN3" />
+
+        <Button
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="0dp"
+            android:text="@string/button_buy"
+            android:textColor="@color/shop_button_text"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="120dp"
+            android:height="40dp"
+            android:onClick="jump"
+            android:background="@drawable/radius_button_2dp_xml"
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/button_confirm" />
+    </LinearLayout>
+</LinearLayout>
