@@ -120,7 +120,7 @@ public class LoginActivity extends AppCompatActivity  {
             public void run() {
                 try {
                     org.apache.http.client.HttpClient httpClient = new org.apache.http.impl.client.DefaultHttpClient();
-                    HttpGet httpGet = new HttpGet("http://10.26.1.226:8080/FIAL2_backSupporter/Login?tel="+user_name);
+                    HttpGet httpGet = new HttpGet("http://172.16.16.59:8080/FIAL2_backSupporter/Login?tel="+user_name);
                     HttpResponse httpResponse = httpClient.execute(httpGet);
                     if (httpResponse.getStatusLine().getStatusCode() == 200){
                         HttpEntity entity = httpResponse.getEntity();
