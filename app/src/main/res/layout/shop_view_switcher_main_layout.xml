@@ -50,7 +50,7 @@
             android:width="120dp"
             android:height="40dp"
             android:onClick="jump"
-            android:background="@drawable/radius_button_2dp_xml"
+            android:background="@drawable/shop_radius_button_2dp_xml"
             style="?android:attr/borderlessButtonStyle"
             android:id="@+id/button_confirm" />
     </LinearLayout>
