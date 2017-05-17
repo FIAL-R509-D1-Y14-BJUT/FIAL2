@@ -5,107 +5,75 @@
     android:id="@+id/activity_goods"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.administrator.lvf_10.Goods">
-
-    <ScrollView
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.administrator.lvf_10.Goods"
+    >
+<ScrollView
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/goods_backcolor"
-        android:fadingEdge="vertical"
-        android:scrollbars="vertical">
-
-        <LinearLayout
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/timg3"
+            android:id="@+id/imageView6" />
 
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/goods_pic_ziluolan" />
+        <TextView
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="惠惠"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView22" />
 
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="37dp"
-                app:srcCompat="@drawable/goods_text_ziluolan" />
+        <TextView
+            android:gravity="center"
+            android:text="9.9元"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView23" />
 
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/goods_text_9yuan9" />
+        <TextView
+            android:layout_marginTop="16dp"
+            android:text="文字描述"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView24" />
 
-            <View
-                android:id="@+id/view3"
-                android:layout_width="252dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/goods_wordscutline" />
+        <View
+    android:layout_marginTop="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/colorDark"/>
+        <TextView
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView25" />
+        <View
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDark"/>
+        <Button
+            android:layout_marginTop="16dp"
+            android:text="Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button8" />
+    </LinearLayout>
+</ScrollView>
 
-            <LinearLayout
-                android:layout_width="252dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="54dp"
-                android:layout_marginRight="54dp"
-                android:layout_marginTop="14dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView24"
-                    android:layout_width="126dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="中文学名\n别   称\n科\n属"
-                    android:textSize="@dimen/text_size_14dp" />
-
-                <TextView
-                    android:id="@+id/textView25"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="紫罗兰\n草桂花、四桃克\n十字花科\n紫罗兰属"
-                    android:textSize="@dimen/text_size_14dp" />
-
-            </LinearLayout>
-
-
-            <View
-                android:id="@+id/view"
-                android:layout_width="252dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="14dp"
-                android:background="@color/goods_wordscutline" />
-
-            <TextView
-                android:id="@+id/textView26"
-                android:layout_width="238dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:gravity="left"
-                android:lineSpacingExtra="@dimen/text_size_14dp"
-                android:text="@string/goods_siluolan_detail"
-                android:textSize="@dimen/text_size_12dp"
-                android:textStyle="bold" />
-
-
-        </LinearLayout>
-    </ScrollView>
-
-    <Button
-        android:id="@+id/goods_buttton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/goods_buttoncolor"
-        android:text="@string/goods_button"
-        android:textSize="24sp"
-        android:textColor="@color/goods_buttonwordcolor"
-/>
 </LinearLayout>
