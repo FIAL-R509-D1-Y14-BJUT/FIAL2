@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
 
@@ -30,7 +31,9 @@
         <activity android:name=".Retrieve_1" />
         <activity android:name=".Retrieve_2" />
         <activity android:name=".Registration" />
-        <activity android:name=".IndividualsAndSetting" />
+        <activity android:name=".IndividualsAndSetting"
+            android:theme="@style/login"
+            />
         <activity android:name=".Money" />
         <activity android:name=".Individuals" />
         <activity android:name=".Shop" />

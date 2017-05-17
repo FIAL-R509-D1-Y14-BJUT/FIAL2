@@ -20,7 +20,7 @@
         android:id="@+id/text_ind_and_set"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/IndividualsAndSetting"
+        android:text="@string/order"
         android:layout_centerInParent="true"
         android:textSize="22sp"
         android:textColor="@color/colorDark"/>

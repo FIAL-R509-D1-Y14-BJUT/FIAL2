@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.administrator.lvf_10.IndividualsAndSetting"
     android:orientation="vertical"
     android:background="#f1f1f1">
@@ -19,13 +18,12 @@
         app:srcCompat="@drawable/pic_headshot_man1"
         android:layout_marginTop="20dp"/>
 
-    <EditText
+    <TextView
         android:id="@+id/ind_and_set_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:gravity="center_horizontal"
         android:text="花火大大"
         android:textColor="#020202"
@@ -144,11 +142,6 @@
             android:drawableRight="@drawable/button_next"
             android:drawableEnd="@drawable/button_next"
             android:paddingRight="18dp"/>
-        <ImageView
-            android:id="@+id/indi_and_set_walletnext"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
 
     </FrameLayout>
 
