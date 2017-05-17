@@ -13,4 +13,5 @@ Icon
 !/app/src/
 /app/src/*
 !/app/src/main/
+*.DS_Store
 !/.gitignore
