@@ -10,15 +10,47 @@
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
+    <string name="goods_request_NoFlower">This type of flower is not existent!</string>
+    <string name="goods_request_success">You have bought this flower!</string>
+    <string name="goods_request_NoMoney">Sorry!Your account has not enough to pay!</string>
+    <string name="goods_request_Addhx_ownFail">assert hx_user_flower failed</string>
+    <string name="goods_request_Addhx_recordFail">assert hx_trade_record failed</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-
-    <!-- Strings related to shop -->
-    <string name="shop">"商店"</string>
+   
+  <!--shop_use>
+  <string name="shop">"商店"</string>
     <string name="button_buy">点击领养</string>
     <string name="button_back">返回</string>
-
-
+  
+   <!--goods_use>
+  <string name="goods_siluolan_detail"><b>形态特征</b>\n
+二年生或多年生草本，高达60厘米。茎直立，多分枝。叶片长圆形或匙形。\n
+总状花序顶生和腋生，花多数，较大，花序轴果期伸长萼片呈囊状，边缘膜质，白色透明；花瓣紫红、淡红或白色，近卵形\n
+\n<b><center>生长习性</center></b>\n
+喜冷凉的气候，忌燥热。\n
+喜通风良好的环境。\n
+生长适温白天15-18℃，夜间10℃左右。\n
+对土壤要求不严，但在排水良好、中性偏碱的土壤中生长较好。\n
+紫罗兰耐寒不耐阴，怕渍水。\n
+它适生于位置较高，在霉雨天气炎热而通风不良时则易受病虫危害。\n
+施肥不宜过多，否则对开花不利。\n
+光照和通风如果不充分，易患病虫害。\n
+\n<b>植物分布</b>\n
+原产欧洲南部及地中海沿岸。\n
+中国南方大城市中常有引种，北方栽于庭园花坛或温室中，供观赏。\n
+\n<b>紫罗兰价值</b>\n
+紫罗兰花朵茂盛，花色鲜艳，香气浓郁，花期长，花序也长为众多爱花者所喜爱，适宜于盆栽观赏。\n
+紫罗兰能够清热解毒，美白祛斑，滋润皮肤，除皱消斑，增强光泽，防紫外线照射。\n
+对呼吸道的帮助很大，对支气管炎也有调理之效。\n
+还可以润喉，以及解决因蛀牙引起的口腔异味。\n
+\n<b>紫罗兰植物文化</b>\n
+紫罗兰的花语：永恒的美与爱；质朴，美德，盛夏的清凉。\n
+紫罗兰（蓝色）：警戒，忠诚，我将永远忠诚。\n
+紫罗兰（白色）：让我们抓住幸福的机会吧。\n
+紫罗兰（紫色）：在梦境中爱上你，对我而言你永远那么美。\n
+同时，紫罗兰也是金牛座的幸运花。\n
+</string>
+    <string name="goods_button">立即购买</string>
 </resources>
