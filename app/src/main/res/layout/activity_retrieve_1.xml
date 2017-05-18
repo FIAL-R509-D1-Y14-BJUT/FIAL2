@@ -1,67 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_retrieve_1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
     tools:context="com.example.administrator.lvf_10.Retrieve_1"
-    android:orientation="vertical">
-
-    <TextView
-        android:text="手机号："
+    android:orientation="vertical"
+    android:background="#ffd513"
+    android:weightSum="1">
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:textColor="@color/colorDark"/>
+        android:paddingBottom="0dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/linearLayout2">
 
-    <EditText
-        android:hint="请输入手机号"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/autoCompleteTextView3"
-        android:inputType="phone"
-        android:maxLines="1"
-        />
+        <ImageButton
+            android:id="@+id/imageButton13"
+            android:layout_width="12dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="14dp"
+            android:background="#ffd513"
+            android:layout_marginBottom="14dp"
+            app:srcCompat="@drawable/button_back_xml" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="43dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="17dp"
+                android:text="注册"
+                android:textColor="#1e262b"
+                android:textSize="17dp" />
+        </LinearLayout>
 
-    <TextView
-        android:layout_marginTop="20dp"
-        android:text="验证码："
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:textColor="@color/colorDark"/>
+    </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#323f48"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="366dp"
+        android:layout_height="61dp"
+        android:layout_gravity="center_horizontal">
+    <RelativeLayout
+        android:layout_width="366dp"
+        android:layout_height="61dp"
+        android:gravity="center_horizontal">
 
         <EditText
-            android:hint="请输入验证码"
+            android:id="@+id/editText"
+            android:layout_width="313dp"
+            android:layout_height="43dp"
+
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shapewhite"
+            android:hint="请输入已注册的手机号"
+            android:inputType="phone"
+            android:textColorHint="#c1c1c1"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/textView29"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/autoCompleteTextView4"
-            android:maxLines="1"
-            android:inputType="number"/>
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="26dp"
+            android:text="手机"
+            android:textColor="#1e262b"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="1dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="109dp"
+            android:layout_marginTop="26dp"
+            app:srcCompat="@drawable/icon_parting_line" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="31dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginLeft="68dp"
+            android:textColor="#c1c1c1"
+            android:text="+86" />
+    </RelativeLayout>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="313dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
 
         <Button
-            android:layout_gravity="center"
-            android:text="发送验证码"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button3" />
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape"
+            android:text="下一步"
+            android:textColor="#ffffff"
+            android:textSize="18dp" />
     </LinearLayout>
 
-    <Button
-        android:layout_marginTop="20dp"
-        android:text="确认"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button4" />
 
 </LinearLayout>

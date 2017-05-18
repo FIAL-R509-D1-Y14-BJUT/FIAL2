@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -14,23 +16,37 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".Retrieve_1" />
-        <activity android:name=".Retrieve_2" />
+        <activity android:name=".Retrieve_1" >
+
+        </activity>
+        <activity android:name=".Retrieve_2" >
+
+        </activity>
+        <activity android:name=".Retrieve_3">
+
+        </activity>
         <activity android:name=".Registration" />
         <activity android:name=".IndividualsAndSetting" />
         <activity android:name=".Money" />
         <activity android:name=".Individuals" />
         <activity android:name=".Shop" />
         <activity android:name=".Goods" />
+        <activity android:name=".BackPassword_3">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BackPassword_2" />
+        <activity android:name=".BackPassword_1">
+
+        </activity>
         <activity android:name=".Lifecycle"></activity>
     </application>
 
