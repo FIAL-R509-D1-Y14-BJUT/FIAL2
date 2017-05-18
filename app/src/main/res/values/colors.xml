@@ -5,11 +5,4 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorTransparent">#00000000</color>
     <color name="colorDark">#000000</color>
-    <color name="goods_backcolor">#fff0ff</color>
-    <color name="goods_topcutline">#fbd0ff</color>
-    <color name="goods_wordscutline">#fbb9ff</color>
-    <color name="goods_wordcolor">#373535</color>
-    <color name="goods_buttoncolor">#6e4483</color>
-    <color name="goods_onbuttoncolor">#573668</color>
-    <color name="goods_buttonwordcolor">#ffffff</color>
 </resources>
