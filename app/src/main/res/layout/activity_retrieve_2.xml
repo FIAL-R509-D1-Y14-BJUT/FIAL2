@@ -73,7 +73,7 @@
                 android:layout_width="313dp"
                 android:layout_height="43dp"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/shapewhite"
+                android:background="@drawable/zzc_shapewhite"
                 android:hint="请输入短信验证码"
                 android:textColorHint="#c1c1c1"
                 android:textSize="14dp" />
@@ -111,7 +111,7 @@
             android:layout_width="313dp"
             android:layout_height="44dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/shape"
+            android:background="@drawable/zzc_shape"
             android:text="下一步"
             android:textSize="18dp"
             android:textColor="#ffffff" />
