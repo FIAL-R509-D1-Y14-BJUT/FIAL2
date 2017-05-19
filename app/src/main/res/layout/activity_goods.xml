@@ -26,14 +26,14 @@
                 android:id="@+id/imageView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/goods_pic_ziluolan" />
+                app:srcCompat="@drawable/pic_ziluolan" />
 
             <ImageView
                 android:id="@+id/imageView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="37dp"
-                app:srcCompat="@drawable/goods_text_ziluolan" />
+                app:srcCompat="@drawable/text_ziluolan" />
 
             <ImageView
                 android:id="@+id/imageView10"
@@ -41,7 +41,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="15dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/goods_text_9yuan9" />
+                app:srcCompat="@drawable/text_9" />
 
             <View
                 android:id="@+id/view3"
