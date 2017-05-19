@@ -10,113 +10,113 @@
     android:background="#ffd513">
 
     <!-- Login progress -->
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:background="@android:color/transparent"
-        android:gravity="center"
-        app:srcCompat="@drawable/icon_logo" />
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="39dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
-        android:background="#ffffff">
-
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="14dp"
-            android:layout_marginLeft="14dp"
-            app:srcCompat="@drawable/icon_person" />
+            android:layout_marginTop="50dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            app:srcCompat="@drawable/icon_logo" />
 
-        <EditText
-            android:id="@+id/text_login"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="46dp"
-            android:layout_marginLeft="46dp"
-            android:background="#ffffff"
-            android:hint="@string/action_sign_in"
-            android:maxLines="1"
-            android:textColorHint="#cecece"
-            android:textColor="#2c2c2c"
-            android:textSize="14sp" />
-    </FrameLayout>
+            android:layout_height="39dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="#ffffff">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="39dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginTop="3dp"
-        android:background="#ffffff">
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="14dp"
+                app:srcCompat="@drawable/icon_person" />
 
+            <EditText
+                android:id="@+id/text_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="46dp"
+                android:layout_marginLeft="46dp"
+                android:background="#ffffff"
+                android:hint="@string/login_sign_in"
+                android:maxLines="1"
+                android:textColorHint="#cecece"
+                android:textColor="#2c2c2c"
+                android:textSize="14sp" />
+        </FrameLayout>
 
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="14dp"
-            android:layout_marginLeft="14dp"
-            app:srcCompat="@drawable/icon_lock" />
-
-        <EditText
-            android:id="@+id/password"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="46dp"
-            android:layout_marginLeft="46dp"
-            android:background="#ffffff"
-            android:hint="@string/prompt_password"
-            android:maxLines="1"
-            android:textColorHint="#cecece"
-            android:textColor="#2c2c2c"
-            android:textSize="14sp" />
-    </FrameLayout>
+            android:layout_height="39dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="3dp"
+            android:background="#ffffff">
+
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="14dp"
+                app:srcCompat="@drawable/icon_lock" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="46dp"
+                android:layout_marginLeft="46dp"
+                android:background="#ffffff"
+                android:hint="@string/login_password"
+                android:maxLines="1"
+                android:textColorHint="#cecece"
+                android:textColor="#2c2c2c"
+                android:textSize="14sp" />
+        </FrameLayout>
 
     <Button
-        android:id="@+id/email_sign_in_button"
-        android:layout_marginBottom="9dp"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@drawable/denglubutton"
-        android:layout_marginTop="22dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
-        android:text="登录"
-        android:textSize="18sp"
-        android:textColor="#ffffff"
-        android:clickable="true"
-        />
-    <TextView
-        android:text="忘记密码"
-        android:textColor="#2c2c2c"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/login_edittext_forget"
-        android:clickable="true"
-        android:textColorLink="#727272"
-        android:textStyle="normal"
-        android:textSize="14sp"/>
-    <TextView
-        android:text="注册新用户"
-        android:textColor="#2c2c2c"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/login_edittext_register"
-        android:layout_marginTop="100dp"
-        android:clickable="true"
-        android:textColorLink="#727272"
-        android:textStyle="normal"
-        android:textSize="14sp"/>
-</LinearLayout>
+                android:id="@+id/email_sign_in_button"
+                android:layout_marginBottom="9dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/denglubutton"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="登录"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:clickable="true"
+                />
+            <TextView
+                android:text="忘记密码"
+                android:textColor="#2c2c2c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/login_edittext_forget"
+                android:clickable="true"
+                android:textColorLink="#727272"
+                android:textStyle="normal"
+                android:textSize="14sp"/>
+            <TextView
+                android:text="注册新用户"
+                android:textColor="#2c2c2c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/login_edittext_register"
+                android:layout_marginTop="100dp"
+                android:clickable="true"
+                android:textColorLink="#727272"
+                android:textStyle="normal"
+                android:textSize="14sp"/>
+    </LinearLayout>

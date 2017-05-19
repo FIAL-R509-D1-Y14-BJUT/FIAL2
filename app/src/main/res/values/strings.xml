@@ -19,6 +19,10 @@
     <string name="shop">"商店"</string>
     <string name="button_buy">点击领养</string>
     <string name="button_back">返回</string>
+    <string name="login_password">请输入密码</string>
+    <string name="login_sign_in">请输入手机号</string>
+    <string name="IndividualsAndSetting">个人设置</string>
+    <string name="order">交易明细</string>
 
 	<!-- Strings related to goods -->
 	 <string name="goods_siluolan_detail"><b>形态特征</b>\n
