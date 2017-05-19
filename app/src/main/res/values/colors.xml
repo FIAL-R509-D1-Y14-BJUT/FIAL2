@@ -27,4 +27,7 @@
     <color name="goods_buttoncolor">#6e4483</color>
     <color name="goods_onbuttoncolor">#573668</color>
     <color name="goods_buttonwordcolor">#ffffff</color>
+	
+	<!--main use-->
+
 </resources>

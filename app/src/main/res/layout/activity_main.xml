@@ -82,6 +82,7 @@
             android:layout_height="52dp"
             android:layout_weight="0.99"
             android:background="@color/colorTransparent"
+            android:src="@drawable/main_button_normal_temperature"
             tools:layout_editor_absoluteX="64dp"
             tools:layout_editor_absoluteY="90dp" />
 
@@ -91,6 +92,7 @@
             android:layout_height="52dp"
             android:layout_weight="1"
             android:background="@color/colorTransparent"
+            android:src="@drawable/main_button_normal_humidity"
             tools:layout_editor_absoluteX="64dp"
             tools:layout_editor_absoluteY="-10dp" />
 
@@ -100,6 +102,7 @@
             android:layout_height="52dp"
             android:layout_weight="1"
             android:background="@color/colorTransparent"
+            android:src="@drawable/main_button_normal_sunshine"
             tools:layout_editor_absoluteX="42dp"
             tools:layout_editor_absoluteY="158dp" />
 
@@ -109,6 +112,7 @@
             android:layout_height="52dp"
             android:layout_weight="1"
             android:background="@color/colorTransparent"
+            android:src="@drawable/main_button_normal_manure"
             tools:layout_editor_absoluteX="187dp"
             tools:layout_editor_absoluteY="-49dp" />
 
@@ -125,6 +129,7 @@
         android:layout_marginStart="273dp"
         android:layout_marginTop="195dp"
         android:background="@color/colorTransparent"
+        android:src="@drawable/main_button_plus"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.854"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -139,6 +144,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
+        android:background="@drawable/main_button_watering"
         android:text="商店"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/imageButton6"
@@ -154,6 +160,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/main_button_watering"
         android:text="浇水"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/btA"
@@ -170,6 +177,7 @@
         android:layout_above="@+id/btB"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:background="@drawable/main_button_watering"
         android:text="施肥"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/btB"
