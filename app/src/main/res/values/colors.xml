@@ -18,5 +18,13 @@
     <color name="shop_button_text">#373535</color>
     <color name="shop_primary_text_material_light">#000000</color>
     <color name="shop_primary_text_material_dark">#000000</color>
-
+	
+	<!-- goods use-->
+	<color name="goods_backcolor">#fff2ff</color>
+    <color name="goods_topcutline">#fbd0ff</color>
+    <color name="goods_wordscutline">#fbb9ff</color>
+    <color name="goods_wordcolor">#373535</color>
+    <color name="goods_buttoncolor">#6e4483</color>
+    <color name="goods_onbuttoncolor">#573668</color>
+    <color name="goods_buttonwordcolor">#ffffff</color>
 </resources>
