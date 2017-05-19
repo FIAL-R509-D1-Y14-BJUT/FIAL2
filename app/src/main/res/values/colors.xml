@@ -9,6 +9,8 @@
     <color name="colorDark">#000000</color>
 
     <!-- shop use-->
+    <color name="shop_colorPrimary">#ffd513</color>
+    <color name="shop_colorPrimaryDark">#ceab0b</color>
     <color name="shop_colorAllBackGround">#f1f1f1</color>
     <color name="shop_ZIUOLAN_back1">#f0ebf7</color>
     <color name="shop_ZIUOLAN_back2">#ebe4f7</color>

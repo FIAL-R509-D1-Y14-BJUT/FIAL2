@@ -7,9 +7,18 @@
     <item name="colorAccent">@color/colorAccent</item>
 </style>
 
+    <!-- DADA theme. -->
     <style name="Theme_shop" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/shop_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/shop_colorPrimaryDark</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    
+    <!-- ZZC theme. -->
+    <style name="ZZCTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
 </resources>
