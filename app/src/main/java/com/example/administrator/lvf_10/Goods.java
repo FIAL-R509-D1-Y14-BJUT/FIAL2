@@ -3,7 +3,6 @@ package com.example.administrator.lvf_10;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
-import android.support.annotation.StringRes;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -90,7 +89,7 @@ public class Goods extends AppCompatActivity {
 
     private void setCustomActionBar() {
         ActionBar.LayoutParams lp = new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT, Gravity.CENTER);
-        View mActionBarView = LayoutInflater.from(this).inflate(R.layout.action_bar, null);
+        View mActionBarView = LayoutInflater.from(this).inflate(R.layout.goods_action_bar, null);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setCustomView(mActionBarView, lp);
         actionBar.setDisplayShowCustomEnabled(true);
