@@ -40,16 +40,16 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:background="@drawable/ind_and_set_button"
-            android:drawableLeft="@drawable/icon_wallet"
-            android:drawableStart="@drawable/icon_wallet"
+            android:drawableLeft="@drawable/xueyuan_icon_wallet"
+            android:drawableStart="@drawable/xueyuan_icon_wallet"
             android:paddingLeft="18dp"
             android:text="我的钱包"
             android:textColor="#020202"
             android:textSize="12sp"
             android:gravity="center_vertical"
             android:drawablePadding="14dp"
-            android:drawableRight="@drawable/button_next"
-            android:drawableEnd="@drawable/button_next"
+            android:drawableRight="@drawable/main_button_next"
+            android:drawableEnd="@drawable/main_button_next"
             android:paddingRight="18dp"/>
 
     </FrameLayout>
@@ -70,16 +70,16 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:background="@drawable/ind_and_set_button"
-            android:drawableLeft="@drawable/icon_order"
-            android:drawableStart="@drawable/icon_order"
+            android:drawableLeft="@drawable/xueyuan_icon_order"
+            android:drawableStart="@drawable/xueyuan_icon_order"
             android:paddingLeft="18dp"
             android:text="交易明细"
             android:textColor="#020202"
             android:textSize="12sp"
             android:gravity="center_vertical"
             android:drawablePadding="14dp"
-            android:drawableRight="@drawable/button_next"
-            android:drawableEnd="@drawable/button_next"
+            android:drawableRight="@drawable/main_button_next"
+            android:drawableEnd="@drawable/main_button_next"
             android:paddingRight="18dp" />
 
     </FrameLayout>
@@ -101,16 +101,16 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:background="@drawable/ind_and_set_button"
-            android:drawableLeft="@drawable/icon_update"
-            android:drawableStart="@drawable/icon_update"
+            android:drawableLeft="@drawable/xueyuan_icon_update"
+            android:drawableStart="@drawable/xueyuan_icon_update"
             android:paddingLeft="18dp"
             android:text="检查更新"
             android:textColor="#020202"
             android:textSize="12sp"
             android:gravity="center_vertical"
             android:drawablePadding="14dp"
-            android:drawableRight="@drawable/button_next"
-            android:drawableEnd="@drawable/button_next"
+            android:drawableRight="@drawable/main_button_next"
+            android:drawableEnd="@drawable/main_button_next"
             android:paddingRight="18dp" />
 
     </FrameLayout>
@@ -131,16 +131,16 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:background="@drawable/ind_and_set_button"
-            android:drawableLeft="@drawable/icon_aboutus"
-            android:drawableStart="@drawable/icon_aboutus"
+            android:drawableLeft="@drawable/xueyuan_icon_aboutus"
+            android:drawableStart="@drawable/xueyuan_icon_aboutus"
             android:paddingLeft="18dp"
             android:text="关于我们"
             android:textColor="#020202"
             android:textSize="12sp"
             android:gravity="center_vertical"
             android:drawablePadding="14dp"
-            android:drawableRight="@drawable/button_next"
-            android:drawableEnd="@drawable/button_next"
+            android:drawableRight="@drawable/main_button_next"
+            android:drawableEnd="@drawable/main_button_next"
             android:paddingRight="18dp"/>
 
     </FrameLayout>

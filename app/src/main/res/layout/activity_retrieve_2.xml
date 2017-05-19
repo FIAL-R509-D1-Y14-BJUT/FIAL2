@@ -94,7 +94,7 @@
                 android:layout_height="24dp"
                 android:layout_marginLeft="109dp"
                 android:layout_marginTop="26dp"
-                app:srcCompat="@drawable/icon_parting_line" />
+                app:srcCompat="@drawable/xueyuan_icon_parting_line" />
         </RelativeLayout>
     </LinearLayout>
 

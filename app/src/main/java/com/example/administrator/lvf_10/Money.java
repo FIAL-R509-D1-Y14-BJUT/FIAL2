@@ -1,14 +1,13 @@
 package com.example.administrator.lvf_10;
 
-import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
@@ -16,15 +15,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -124,7 +119,7 @@ public class Money extends AppCompatActivity {
         //添加切换界面的监听器
         viewPager.addOnPageChangeListener(new MyOnPageChangeListener());
         // 获取滚动条的宽度
-        bmpW = BitmapFactory.decodeResource(getResources(), R.drawable.line_record).getWidth();
+        bmpW = BitmapFactory.decodeResource(getResources(), R.drawable.xueyuan_line_record).getWidth();
         //为了获取屏幕宽度，新建一个DisplayMetrics对象
         DisplayMetrics displayMetrics = new DisplayMetrics();
         //将当前窗口的一些信息放在DisplayMetrics类中

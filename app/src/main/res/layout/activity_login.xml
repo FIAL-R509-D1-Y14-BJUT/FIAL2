@@ -17,7 +17,7 @@
             android:layout_marginTop="50dp"
             android:background="@android:color/transparent"
             android:gravity="center"
-            app:srcCompat="@drawable/icon_logo" />
+            app:srcCompat="@drawable/xueyuan_icon_logo" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="14dp"
                 android:layout_marginLeft="14dp"
-                app:srcCompat="@drawable/icon_person" />
+                app:srcCompat="@drawable/xueyuan_icon_person" />
 
             <EditText
                 android:id="@+id/text_login"
@@ -67,7 +67,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="14dp"
                 android:layout_marginLeft="14dp"
-                app:srcCompat="@drawable/icon_lock" />
+                app:srcCompat="@drawable/xueyuan_icon_lock" />
 
             <EditText
                 android:id="@+id/password"

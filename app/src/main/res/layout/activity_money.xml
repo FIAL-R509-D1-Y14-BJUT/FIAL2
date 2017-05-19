@@ -42,7 +42,7 @@
         android:layout_height="9dp"
         android:id="@+id/scrollbar"
         android:scaleType="matrix"
-        android:src="@drawable/line_record"
+        android:src="@drawable/xueyuan_line_record"
         android:layout_below="@+id/LinearL1"/>
 
     <android.support.v4.view.ViewPager

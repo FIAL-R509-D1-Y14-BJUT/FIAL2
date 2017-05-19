@@ -1,9 +1,8 @@
 package com.example.administrator.lvf_10;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -11,19 +10,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.PipedReader;
-import java.io.PipedWriter;
-
 import com.google.gson.Gson;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.util.EntityUtils;
+
 import java.io.PipedReader;
 import java.io.PipedWriter;
-
-import static android.Manifest.permission.READ_CONTACTS;
 
 /**
  * A login screen that offers login via email/password.
@@ -88,7 +83,7 @@ public class LoginActivity extends AppCompatActivity  {
             public void onClick(View  v){
                 //wangji jiemian
                 forget.setBackgroundColor(0xff727272);
-                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this,Retrieve_1.class);
                 startActivity(intent);
             }
         });
@@ -98,7 +93,7 @@ public class LoginActivity extends AppCompatActivity  {
             public void onClick(View  v){
                 //zhuce jiemian
                 register.setBackgroundColor(0xff727272);
-                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this,BackPassword_1.class);
                 startActivity(intent);
             }
         });
