@@ -16,10 +16,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Locale;
 
 public class Money extends AppCompatActivity {
 
@@ -38,6 +48,9 @@ public class Money extends AppCompatActivity {
     private int bmpW;
     //一倍滚动量
     private int one;
+
+    private ListView lv1;
+    private ListView lv2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,6 +139,45 @@ public class Money extends AppCompatActivity {
         matrix.postTranslate(offset, 0);
         //将滚动条的初始位置设置成与左边界间隔一个offset
         scrollbar.setImageMatrix(matrix);
+
+        //ListView Part
+        /*当交易请求完成时，返回signal，通过监听signal变化自动生成记录数据*/
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.CHINA);
+        String nowtime = format.format(new Date());
+        int signal = 0;
+        int count = 1;
+        lv1 = (ListView)view1.findViewById(R.id.order_list1);
+        ArrayList<HashMap<String,Object>> ListItem1 = new ArrayList<HashMap<String,Object>>();
+       // signal = getsignal();
+        //while(signal == 1) {
+        HashMap<String, Object> obj1 = new HashMap<String, Object>();
+        obj1.put("ItemTitle", "第" + count + "条记录");
+        obj1.put("ItemDates", nowtime);
+        obj1.put("ItemMoney", "+" + "20");//getMoney,返回String
+        count++;
+        ListItem1.add(obj1);
+       // }
+       SimpleAdapter mSimpleAdapter1 = new SimpleAdapter(this,ListItem1,R.layout.order_mylist,new String[]{"ItemTitle","ItemDates","ItemMoney"},new int[]
+                {R.id.order_num_tv,R.id.order_time_tv,R.id.order_money_tv});
+        lv1.setAdapter(mSimpleAdapter1);
+
+
+        /////
+        int count2 = 1;
+        lv2 = (ListView)view2.findViewById(R.id.order_list2);
+        ArrayList<HashMap<String,Object>> ListItem2 = new ArrayList<HashMap<String,Object>>();
+        // signal = getsignal();
+        //while(signal == 1) {
+        HashMap<String, Object> obj2 = new HashMap<String, Object>();
+        obj2.put("ItemTitle", "第" + count2 + "条记录");
+        obj2.put("ItemDates", nowtime);
+        obj2.put("ItemMoney", "-" + "20");//getMoney,返回String
+        count++;
+        ListItem2.add(obj2);
+        // }
+        SimpleAdapter mSimpleAdapter2 = new SimpleAdapter(this,ListItem2,R.layout.order_mylist2,new String[]{"ItemTitle","ItemDates","ItemMoney"},new int[]
+                {R.id.order_num_tv,R.id.order_time_tv,R.id.order_money_tv});
+        lv2.setAdapter(mSimpleAdapter2);
     }
 
     public class MyOnPageChangeListener implements ViewPager.OnPageChangeListener {
@@ -191,5 +243,8 @@ private void setCustomActionBar(){
     actionBar.setDisplayShowTitleEnabled(false);
     Toolbar parent =(Toolbar)mActionBarView.getParent();
     parent.setContentInsetsAbsolute(0,0);
+}
+private int getsignal(){
+    return 0;
 }
 }
