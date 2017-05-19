@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20sp"
+    android:paddingRight="20sp"
+    android:paddingTop="13sp"
+    android:paddingBottom="17dp"
+    tools:context="com.example.administrator.lvf_10.Shop"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/shop_colorAllBackGround">
+
+    <ViewSwitcher
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/shop_viewSwitcher"
+    />
+
+    <LinearLayout
+        android:layout_marginTop="17dp"
+        android:layout_width="40dp"
+        android:layout_height="14dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shop_icon_navdot_selected"
+            android:id="@+id/imageButton_doc_selected"
+            android:onClick="prev"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shop_icon_navdot_unselected"
+            android:id="@+id/imageButton_doc_default"
+            android:onClick="next"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+</LinearLayout>
