@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -95,6 +96,9 @@ public class Goods extends AppCompatActivity {
         actionBar.setDisplayShowCustomEnabled(true);
         actionBar.setDisplayShowHomeEnabled(false);
         actionBar.setDisplayShowTitleEnabled(false);
+        Toolbar parent =(Toolbar)mActionBarView.getParent();
+        parent.setContentInsetsAbsolute(0,0);
+
     }
 
     private String sendRequest_goods(final String user_tel, final String flo_name) {
