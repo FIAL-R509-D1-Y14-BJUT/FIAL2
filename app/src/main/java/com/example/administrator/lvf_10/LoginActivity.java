@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -78,23 +79,33 @@ public class LoginActivity extends AppCompatActivity  {
         });
 
         final TextView forget = (TextView) findViewById(R.id.login_edittext_forget);
-        forget.setOnClickListener(new View.OnClickListener(){
+        forget.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View  v){
-                //wangji jiemian
-                forget.setBackgroundColor(0xff727272);
-                Intent intent = new Intent(LoginActivity.this,Retrieve_1.class);
-                startActivity(intent);
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction()==MotionEvent.ACTION_DOWN)
+                    forget.setBackgroundColor(0xff727272);
+                if (event.getAction()==MotionEvent.ACTION_UP)
+                {
+                    forget.setBackgroundColor(0xff2c2c2c);
+                    Intent intent = new Intent(LoginActivity.this,Retrieve_1.class);
+                    startActivity(intent);
+                }
+                return false;
             }
         });
         final TextView register = (TextView) findViewById(R.id.login_edittext_register);
-        register.setOnClickListener(new View.OnClickListener(){
+        register.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View  v){
-                //zhuce jiemian
-                register.setBackgroundColor(0xff727272);
-                Intent intent = new Intent(LoginActivity.this,BackPassword_1.class);
-                startActivity(intent);
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction()==MotionEvent.ACTION_DOWN)
+                    register.setBackgroundColor(0xff727272);
+                if (event.getAction()==MotionEvent.ACTION_UP)
+                {
+                    register.setBackgroundColor(0xff2c2c2c);
+                    Intent intent = new Intent(LoginActivity.this,BackPassword_1.class);
+                    startActivity(intent);
+                }
+                return false;
             }
         });
 
