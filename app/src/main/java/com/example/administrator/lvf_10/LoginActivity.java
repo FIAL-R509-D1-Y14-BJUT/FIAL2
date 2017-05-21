@@ -87,7 +87,7 @@ public class LoginActivity extends AppCompatActivity  {
                 if (event.getAction()==MotionEvent.ACTION_UP)
                 {
                     forget.setBackgroundColor(0xffffd513);
-                    Intent intent = new Intent(LoginActivity.this,Retrieve_1.class);
+                    Intent intent = new Intent(LoginActivity.this,BackPassword_1.class);
                     startActivity(intent);
                 }
                 return false;
@@ -102,7 +102,7 @@ public class LoginActivity extends AppCompatActivity  {
                 if (event.getAction()==MotionEvent.ACTION_UP)
                 {
                     register.setBackgroundColor(0xffffd513);
-                    Intent intent = new Intent(LoginActivity.this,BackPassword_1.class);
+                    Intent intent = new Intent(LoginActivity.this,Retrieve_1.class);
                     startActivity(intent);
                 }
                 return false;
