@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity  {
                 String text2 = passwd.getText().toString();
                 String respondpassword = sendRequest_login(user_name);
                 if(!respondpassword.equals("")){ Astate = 1;}
-                if(user_name.length()==0){ Astate = 0;}
+                else if(user_name.length()==0){ Astate = 0;}
                 else { Astate = -1;}
                 if(text2.length()==0){ Bstate = 0;}
                 else if(text2.equals(respondpassword)){ Bstate = 1;}
