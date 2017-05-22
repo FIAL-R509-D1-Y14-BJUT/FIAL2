@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
      * 图片资源id
      */
     private int[] imgIdArray ;
+    String tel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -196,6 +197,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
                             button1.setImageDrawable(getResources().getDrawable(R.drawable.main_button_flower));
                             Intent intent = new Intent();
                             intent.setClass(MainActivity.this, Shop.class);
+                            intent.putExtra("user_tel", tel);
                             startActivity(intent);
                         }
                         n=1;
@@ -209,7 +211,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         Gson gson = new Gson();
         int arraySize = 0;//数组大小
         Bundle bundle = this.getIntent().getExtras();
-        String tel = bundle.getString("user_tel");
+        tel = bundle.getString("user_tel");
         String response = get_userflower(tel);//获取到String类型的json数组
         System.out.println(response);
         JsonParser parser = new JsonParser();//parse用于从一个字符串中解析出json对象

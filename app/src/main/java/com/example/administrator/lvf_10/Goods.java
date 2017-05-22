@@ -30,7 +30,7 @@ import java.io.PipedWriter;
 
 public class Goods extends AppCompatActivity {
 
-    private String user_tel = "150";
+    private String user_tel;
     private String flo_name = "ziluolan";
 
     @Override
@@ -42,6 +42,8 @@ public class Goods extends AppCompatActivity {
         if(Build.VERSION.SDK_INT>=21){
             getSupportActionBar().setElevation(0);
         }
+        Bundle bundle = this.getIntent().getExtras();
+        user_tel = bundle.getString("user_tel");
         final Button goods_button = (Button) findViewById(R.id.goods_buttton);
         final Button back_button = (Button) findViewById(R.id.button_back);
         final Button back_button_select = (Button) findViewById(R.id.button_back_select);
@@ -72,7 +74,7 @@ public class Goods extends AppCompatActivity {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
 
-                                    String response = sendRequest_goods("150", "ziluolan");
+                                    String response = sendRequest_goods(user_tel, "ziluolan");
 
 
                                     if (response == null) {
@@ -82,6 +84,7 @@ public class Goods extends AppCompatActivity {
 
                                         Toast.makeText(Goods.this, getResources().getText(R.string.goods_request_success), Toast.LENGTH_LONG).show();
                                         Intent intent = new Intent();
+                                        intent.putExtra("user_tel", user_tel);
                                         intent.setClass(Goods.this, MainActivity.class);//从一个activity跳转到另一个activity
                                         startActivity(intent);
                                     } else if (response.equals("NoFlower")) {

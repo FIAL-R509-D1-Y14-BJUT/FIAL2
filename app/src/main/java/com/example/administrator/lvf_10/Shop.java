@@ -97,7 +97,10 @@ public class Shop extends AppCompatActivity {
         });
     }
 public void jump(View v){
+    Bundle bundle = this.getIntent().getExtras();
+    String tel = bundle.getString("user_tel");
     Intent intent = new Intent(Shop.this, Goods.class);
+    intent.putExtra("user_tel", tel);
     startActivity(intent);
 }
     public void next(View v) {
