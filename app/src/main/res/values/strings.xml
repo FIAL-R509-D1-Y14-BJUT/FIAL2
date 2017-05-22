@@ -53,10 +53,10 @@
 同时，紫罗兰也是金牛座的幸运花。\n
 </string>
     <string name="goods_button">立即购买</string>
-	<string name="goods_request_NoFlower">This type of flower is not existent!</string>
-    <string name="goods_request_success">You have bought this flower!</string>
-    <string name="goods_request_NoMoney">Sorry!Your account has not enough to pay!</string>
-    <string name="goods_request_Addhx_ownFail">assert hx_user_flower failed</string>
-    <string name="goods_request_Addhx_recordFail">assert hx_trade_record failed</string>
+	<string name="goods_request_NoFlower">不存在此类花朵</string>
+    <string name="goods_request_success">您已成功购买花朵</string>
+    <string name="goods_request_NoMoney">抱歉，您没有足够的钱支付</string>
+    <string name="goods_request_Addhx_ownFail">插入用户花朵表失败</string>
+    <string name="goods_request_Addhx_recordFail">插入记录表失败</string>
 
 </resources>

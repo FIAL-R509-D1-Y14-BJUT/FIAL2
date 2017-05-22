@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
@@ -40,49 +41,68 @@ public class Goods extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= 21) {
             getSupportActionBar().setElevation(1);
         }
-        Button goods_button = (Button) findViewById(R.id.goods_buttton);
+        final Button goods_button = (Button) findViewById(R.id.goods_buttton);
+        final Button back_button = (Button) findViewById(R.id.button_back);
+        final Button back_button_select = (Button) findViewById(R.id.button_back_select);
+        back_button.setOnTouchListener(new View.OnTouchListener(){
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN)
+                    back_button_select.setVisibility(View.VISIBLE);
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    back_button_select.setVisibility(View.INVISIBLE);
+                    finish();
+                }
+                return true;
+            }
+        });
 
-        goods_button.setOnClickListener(new View.OnClickListener() {
+        goods_button.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
-                new AlertDialog.Builder(Goods.this)
-                        .setTitle("购买提示")
-                        .setMessage("您购买的 紫罗兰 需要花费" +
-                                "1元")
-                        .setPositiveButton("购买", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN)
+                    goods_button.setBackgroundColor(0xff573688);
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    goods_button.setBackgroundColor(0xff6e4483);
+                    new AlertDialog.Builder(Goods.this)
+                            .setTitle("购买提示")
+                            .setMessage("您购买的 紫罗兰 需要花费" +
+                                    "10元")
+                            .setPositiveButton("购买", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
 
-                                String response = sendRequest_goods("150", "ziluolan");
+                                    String response = sendRequest_goods("150", "ziluolan");
 
 
-                                if (response == null) {
-                                    Log.d("Sign Up Error!", "http response is null");
-                                    return;
-                                } else if (response.equals("success")) {
+                                    if (response == null) {
+                                        Log.d("Sign Up Error!", "http response is null");
+                                        return;
+                                    } else if (response.equals("success")) {
 
-                                    Toast.makeText(Goods.this, getResources().getText(R.string.goods_request_success), Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent();
-                                    intent.setClass(Goods.this, MainActivity.class);//从一个activity跳转到另一个activity
-                                    startActivity(intent);
-                                } else if (response.equals("NoFlower")) {
-                                    Toast.makeText(Goods.this, getResources().getText(R.string.goods_request_NoFlower), Toast.LENGTH_SHORT).show();
-                                } else if (response.equals("NoMoney")) {
-                                    Toast.makeText(Goods.this, getResources().getText(R.string.goods_request_NoMoney), Toast.LENGTH_SHORT).show();
-                                } else if (response.equals("fail")) {
-                                    Toast.makeText(Goods.this, "request fialed!", Toast.LENGTH_SHORT).show();
-                                } else {
-                                    Toast.makeText(Goods.this, "error", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Goods.this, getResources().getText(R.string.goods_request_success), Toast.LENGTH_LONG).show();
+                                        Intent intent = new Intent();
+                                        intent.setClass(Goods.this, MainActivity.class);//从一个activity跳转到另一个activity
+                                        startActivity(intent);
+                                    } else if (response.equals("NoFlower")) {
+                                        Toast.makeText(Goods.this, getResources().getText(R.string.goods_request_NoFlower), Toast.LENGTH_SHORT).show();
+                                    } else if (response.equals("NoMoney")) {
+                                        Toast.makeText(Goods.this, getResources().getText(R.string.goods_request_NoMoney), Toast.LENGTH_SHORT).show();
+                                    } else if (response.equals("fail")) {
+                                        Toast.makeText(Goods.this, "request fialed!", Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        Toast.makeText(Goods.this, "error", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
-                            }
-                        })
-                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
+                            })
+                            .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
 
-                            }
-                        })
-                        .show();
+                                }
+                            })
+                            .show();
+                }
+            return true;
             }
         });
     }
