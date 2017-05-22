@@ -14,9 +14,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <!-- qi&qi -->
         <activity android:name=".MainActivity" 
-		android:theme="@style/AppTheme_main"/><!-- change -->
+		android:theme="@style/AppTheme_main"/>
+
         <!-- zzc -->
         <activity
             android:name=".LoginActivity"
@@ -28,19 +30,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Retrieve_1" />
-        <activity android:name=".Retrieve_2" />
-        <activity android:name=".Retrieve_3" />
+        <activity android:name=".Retrieve_1"
+            android:theme="@style/ZZCTheme"/>
+        <activity android:name=".Retrieve_2"
+            android:theme="@style/ZZCTheme"/>
+        <activity android:name=".Retrieve_3"
+            android:theme="@style/ZZCTheme"/>
         <activity android:name=".Registration" />
-        <activity android:name=".BackPassword_3" />
-        <activity android:name=".BackPassword_2" />
-        <activity android:name=".BackPassword_1" />
+        <activity android:name=".BackPassword_3"
+            android:theme="@style/ZZCTheme"/>
+        <activity android:name=".BackPassword_2"
+            android:theme="@style/ZZCTheme"/>
+        <activity android:name=".BackPassword_1"
+            android:theme="@style/ZZCTheme"/>
+
         <!-- xueyuan -->
         <activity android:name=".IndividualsAndSetting" />
         <activity android:name=".Money" />
         <activity android:name=".Individuals" />
+
         <!-- shuang -->
         <activity android:name=".Goods" />
+
         <!-- dada -->
         <activity android:name=".Shop"
             android:label="商店"

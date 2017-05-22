@@ -55,11 +55,12 @@ public class Retrieve_3 extends Activity {
                     normalDialog.show();
                 }
                 else {
-                    String response = SendRequest.sendRequest_signup(Phonenumber, password);
+                    String ip = getResources().getString(R.string.back_supporter_ip);
+                    String response = SendRequest.sendRequest_signup(Phonenumber, password,ip);
                     switch(response){
                         case "success": {
                             AlertDialog.Builder normalDialog = new AlertDialog.Builder(Retrieve_3.this);
-                            normalDialog.setTitle("提示").setMessage("密码修改成功");
+                            normalDialog.setTitle("提示").setMessage("注册成功");
                             normalDialog.setPositiveButton("确定",
                                     new DialogInterface.OnClickListener() {
                                         @Override
@@ -70,7 +71,13 @@ public class Retrieve_3 extends Activity {
                             // 创建实例并显示
                             normalDialog.show();
 
-                            finish();
+                            SendRequest.sendRequest_goods(Phonenumber, "ziluolan", getResources().getString(R.string.back_supporter_ip));
+                            SendRequest.sendRequest_goods(Phonenumber, "ziluolan", getResources().getString(R.string.back_supporter_ip));
+
+                            Intent intent = new Intent(Retrieve_3.this, MainActivity.class);
+                            intent.putExtra("message", "signup");
+                            intent.putExtra("user_tel", Phonenumber);
+                            startActivity(intent);
                             break;
                         }
                         case "fail": {

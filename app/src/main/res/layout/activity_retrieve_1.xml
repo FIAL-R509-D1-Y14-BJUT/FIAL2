@@ -72,7 +72,7 @@
 
             android:layout_marginTop="15dp"
             android:background="@drawable/zzc_shapewhite"
-            android:hint="请输入已注册的手机号"
+            android:hint="请输入您的手机号"
             android:inputType="phone"
             android:textColorHint="#c1c1c1"
             android:textSize="14dp" />

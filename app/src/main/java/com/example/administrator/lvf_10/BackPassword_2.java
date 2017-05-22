@@ -77,7 +77,8 @@ public class BackPassword_2 extends AppCompatActivity {
         tv.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                response = SendRequest.sendRequest_getcode();
+                String ip = getResources().getString(R.string.back_supporter_ip);
+                response = SendRequest.sendRequest_getcode(ip);
                 AlertDialog.Builder normalDialog = new AlertDialog.Builder(BackPassword_2.this);
                 normalDialog.setTitle("提示").setMessage("验证码为"+response);
                 normalDialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {

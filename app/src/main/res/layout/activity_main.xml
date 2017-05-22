@@ -13,9 +13,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.administrator.lvf_10.MainActivity">
 
-
-
-
     <RelativeLayout
         android:layout_width="336dp"
         android:layout_height="442dp"
@@ -120,73 +117,72 @@
 
     <ImageButton
         android:id="@+id/imageButton6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="0dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="273dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="273dp"
-        android:layout_marginTop="195dp"
         android:background="@color/colorTransparent"
         android:src="@drawable/main_button_plus"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageButton
+        android:id="@+id/jiaoshui"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="0.99"
+        android:background="@color/colorTransparent"
+        android:src="@drawable/main_button_watering"
+        android:text="浇水"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton6" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btA"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:background="@drawable/main_button_watering"
+        android:layout_marginBottom="-9dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorTransparent"
+        android:src="@drawable/main_button_flower"
         android:text="商店"
         android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton6"
-        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintRight_toLeftOf="@+id/imageButton6" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/main_button_watering"
-        android:text="浇水"
+        android:layout_marginBottom="-33dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorTransparent"
+        android:src="@drawable/main_button_setting"
+        android:text="个人设置"
         android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/btA"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintRight_toLeftOf="@+id/btA" />
 
-    <Button
-        android:id="@+id/btC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btB"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/main_button_watering"
-        android:text="施肥"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/btB"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-<!--
+    <!--
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/main_activity_floatingactionbuttom"
         android:layout_width="wrap_content"

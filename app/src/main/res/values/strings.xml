@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">LvF_1.0</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="back_supporter_ip">10.27.49.229</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>

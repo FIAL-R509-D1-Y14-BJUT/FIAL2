@@ -14,7 +14,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import static com.example.administrator.lvf_10.SendRequest.sendrequest_retrievepassword;
 
 public class Retrieve_1 extends AppCompatActivity {
 
@@ -36,7 +35,8 @@ public class Retrieve_1 extends AppCompatActivity {
                 String a = edittext.getText().toString();
 
                 if (a.length() == 11) {
-                    String retrievepassword = sendrequest_retrievepassword(a,password);
+                    String ip = getResources().getString(R.string.back_supporter_ip);
+                    String retrievepassword = SendRequest.sendrequest_retrievepassword(a,password,ip);
                     if (retrievepassword.equals("null")) {
                         Intent intent = new Intent(Retrieve_1.this, Retrieve_2.class);//设置界面跳转
                         intent.putExtra("PhoneNumber", a);//发送消息“手机号”

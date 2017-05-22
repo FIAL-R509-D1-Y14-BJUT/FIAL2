@@ -38,8 +38,9 @@ public class Goods extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goods);
         setCustomActionBar();
-        if (Build.VERSION.SDK_INT >= 21) {
-            getSupportActionBar().setElevation(1);
+        //以下代码用于去除阴影
+        if(Build.VERSION.SDK_INT>=21){
+            getSupportActionBar().setElevation(0);
         }
         final Button goods_button = (Button) findViewById(R.id.goods_buttton);
         final Button back_button = (Button) findViewById(R.id.button_back);
@@ -134,7 +135,7 @@ public class Goods extends AppCompatActivity {
             public void run() {
                 try {
                     org.apache.http.client.HttpClient httpClient = new org.apache.http.impl.client.DefaultHttpClient();
-                    HttpGet httpGet = new HttpGet("http://172.16.16.59:8080/FIAL2_backSupporter/BuyBuyBuy?tel=" + user_tel + "&" + "flo=" + flo_name);
+                    HttpGet httpGet = new HttpGet("http://" + getResources().getString(R.string.back_supporter_ip) + ":8080/FIAL2_backSupporter/BuyBuyBuy?tel=" + user_tel + "&" + "flo=" + flo_name);
                     HttpResponse httpResponse = httpClient.execute(httpGet);
                     if (httpResponse.getStatusLine().getStatusCode() == 200) {
                         HttpEntity entity = httpResponse.getEntity();

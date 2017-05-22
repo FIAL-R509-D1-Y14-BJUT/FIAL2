@@ -41,8 +41,8 @@ public class IndividualsAndSetting extends AppCompatActivity {
                 if(event.getAction()==MotionEvent.ACTION_UP){
                     Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_SHORT).show();
                     //turn to OrderActivity.class
-                    Intent intent = new Intent(IndividualsAndSetting.this,MainActivity.class);
-                    startActivity(intent);
+                    //Intent intent = new Intent(IndividualsAndSetting.this,MainActivity.class);
+                    //startActivity(intent);
                 }
                 return false;
             }

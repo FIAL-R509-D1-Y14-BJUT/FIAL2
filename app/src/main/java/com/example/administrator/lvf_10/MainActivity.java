@@ -6,9 +6,9 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -55,41 +55,162 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageButton button = (ImageButton) findViewById(R.id.imageButton6);
-        final Button button1 = (Button) findViewById(R.id.btA);
-        final Button button2 = (Button) findViewById(R.id.btB);
-        final Button button3 = (Button) findViewById(R.id.btC);
-        button.setOnClickListener(new View.OnClickListener() {
+        final ImageButton button = (ImageButton) findViewById(R.id.imageButton6);
+        final ImageButton jiaoshui = (ImageButton)findViewById(R.id.jiaoshui);
+        final ImageButton button1 = (ImageButton) findViewById(R.id.btA);
+        final ImageButton button2 = (ImageButton) findViewById(R.id.btB);
+        final ImageButton button3 = (ImageButton) findViewById(R.id.imageButton5);
 
+        jiaoshui.setOnTouchListener(new View.OnTouchListener() {
+            int n = 1;
             @Override
-            public void onClick(View v) {                      //监听floating按钮
-                if (button1.getVisibility() == View.VISIBLE) {
-                    button1.setVisibility(View.GONE);
-                    button2.setVisibility(View.GONE);
-                    button3.setVisibility(View.GONE);
-                } else {
-                    button1.setVisibility(View.VISIBLE);
-                    button2.setVisibility(View.VISIBLE);
-                    button3.setVisibility(View.VISIBLE);
+            public boolean  onTouch(View v, MotionEvent event) {   //监听floating按钮
+                switch (event.getAction()) {
+
+                    case MotionEvent.ACTION_DOWN:
+                        //按下
+                        jiaoshui.setImageDrawable(getResources().getDrawable(R.drawable.main_button_watering_selected));
+                        break;
+
+                    case MotionEvent.ACTION_MOVE:
+                        //移动
+                        n = 0;
+                        jiaoshui.setImageDrawable(getResources().getDrawable(R.drawable.main_button_watering));
+                        break;
+
+                    case MotionEvent.ACTION_UP:
+                        //抬起
+                        if(n == 1) {
+                            jiaoshui.setImageDrawable(getResources().getDrawable(R.drawable.main_button_watering));
+                        }
+                        n=1;
+                        break;
+
                 }
+                return true;
             }
         });
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        button.setOnTouchListener(new View.OnTouchListener() {
+            int n = 1;
             @Override
-            public void onClick(View v) {//商店跳转
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this, Shop.class);
-                startActivity(intent);
+            public boolean  onTouch(View v, MotionEvent event) {                      //监听floating按钮
+
+                switch (event.getAction()) {
+
+                    case MotionEvent.ACTION_DOWN:
+                        //按下
+                        if (button1.getVisibility() == View.VISIBLE) {
+                            button.setImageDrawable(getResources().getDrawable(R.drawable.main_button_minus_selected));
+                        }
+                        else {
+                            button.setImageDrawable(getResources().getDrawable(R.drawable.main_button_plus_selected));
+                        }
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        //移动
+                        n = 0;
+                        if (button1.getVisibility() == View.VISIBLE) {
+                            button.setImageDrawable(getResources().getDrawable(R.drawable.main_button_minus));
+                        }
+                        else {
+                            button.setImageDrawable(getResources().getDrawable(R.drawable.main_button_plus));
+                        }
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        //抬起
+                        if(n == 1){
+                        if (button1.getVisibility() == View.VISIBLE) {
+                            button.setImageDrawable(getResources().getDrawable(R.drawable.main_button_plus));
+                            button1.setVisibility(View.GONE);
+                            button2.setVisibility(View.GONE);
+                        } else {
+                            button.setImageDrawable(getResources().getDrawable(R.drawable.main_button_minus));
+                            button1.setVisibility(View.VISIBLE);
+                            button2.setVisibility(View.VISIBLE);
+                        }}
+                        n=1;
+                        break;
+                }
+                return true;
+            }
+        });
+
+        button2.setOnTouchListener(new View.OnTouchListener() {
+            int n = 1;
+            @Override
+            public boolean  onTouch(View v, MotionEvent event) {   //监听floating按钮
+                switch (event.getAction()) {
+
+                    case MotionEvent.ACTION_DOWN:
+                        //按下
+                        button2.setImageDrawable(getResources().getDrawable(R.drawable.main_button_setting_selected));
+                        break;
+
+                    case MotionEvent.ACTION_MOVE:
+                        //移动
+                        n = 0;
+                        button2.setImageDrawable(getResources().getDrawable(R.drawable.main_button_setting));
+                        break;
+
+                    case MotionEvent.ACTION_UP:
+                        //抬起
+                        if(n == 1) {
+                            button2.setImageDrawable(getResources().getDrawable(R.drawable.main_button_setting));
+                            Intent intent = new Intent();
+                            intent.setClass(MainActivity.this, IndividualsAndSetting.class);
+                            startActivity(intent);
+                        }
+
+                        n=1;
+                        break;
+
+                }
+                return true;
+            }
+        });
+
+        button1.setOnTouchListener(new View.OnTouchListener() {
+            int n = 1;
+            @Override
+            public boolean  onTouch(View v, MotionEvent event) {   //监听floating按钮
+                switch (event.getAction()) {
+
+                    case MotionEvent.ACTION_DOWN:
+                        //按下
+                        button1.setImageDrawable(getResources().getDrawable(R.drawable.main_button_flower_selected));
+                        break;
+
+                    case MotionEvent.ACTION_MOVE:
+                        //移动
+                        n = 0;
+                        button1.setImageDrawable(getResources().getDrawable(R.drawable.main_button_flower));
+                        break;
+
+                    case MotionEvent.ACTION_UP:
+                        //抬起
+                        if(n == 1) {
+                            button1.setImageDrawable(getResources().getDrawable(R.drawable.main_button_flower));
+                            Intent intent = new Intent();
+                            intent.setClass(MainActivity.this, Shop.class);
+                            startActivity(intent);
+                        }
+                        n=1;
+                        break;
+                }
+                return true;
             }
         });
 
         //调用接口并解析json数组
         Gson gson = new Gson();
         int arraySize = 0;//数组大小
-        String response = get_userflower("150");//获取到String类型的json数组
+        Bundle bundle = this.getIntent().getExtras();
+        String tel = bundle.getString("user_tel");
+        String response = get_userflower(tel);//获取到String类型的json数组
         System.out.println(response);
         JsonParser parser = new JsonParser();//parse用于从一个字符串中解析出json对象
         JsonElement element = parser.parse(response);//解析出json对象
@@ -133,13 +254,16 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         //载入图片资源ID
         for (int i = 0; i < styflowerdataList.size(); i++) {
             if (flower_name.get(i) == "ziluolan") {
-                imgIdArray[i] = R.drawable.timg;
-            } else if (flower_name.get(i) == "xiangrikui") {
-                imgIdArray[i] = R.drawable.timg2;
+                imgIdArray[i] = R.drawable.pic_ziluolan;
+            } else if (flower_name.get(i) == "xiangrikui") {/////////////////////////////////////////////
+                imgIdArray[i] = R.drawable.pic_ziluolan;
             } else {
-                imgIdArray[i] = R.drawable.timg3;
+                imgIdArray[i] = R.drawable.pic_ziluolan;//////////////////////////////////////
             }
 
+        }
+        if(imgIdArray.length == 0){
+            imgIdArray[0] = R.drawable.main_toshop1;
         }
     /////////////////////////////xx/////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -273,7 +397,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
                 try {
                     org.apache.http.client.HttpClient httpClient = new org.apache.http.impl.client.DefaultHttpClient();
                     //HttpGet httpGet = new HttpGet("http://10.0.2.2:8080/whatIsGoodFriend/Login?name="+user_name);
-                    HttpGet httpGet = new HttpGet("http://172.16.16.59:8080/FIAL2_backSupporter/GetUserFlower?tel="+user_name);//"http://172.16.16.59:8080/FIAL2_backSupporter/GetUserFlower?tel="
+                    HttpGet httpGet = new HttpGet("http://" + getResources().getString(R.string.back_supporter_ip) + ":8080/FIAL2_backSupporter/GetUserFlower?tel="+user_name);//"http://172.16.16.59:8080/FIAL2_backSupporter/GetUserFlower?tel="
                     HttpResponse httpResponse = httpClient.execute(httpGet);
                     if (httpResponse.getStatusLine().getStatusCode() == 200){
                         HttpEntity entity = httpResponse.getEntity();
@@ -309,6 +433,3 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     }
 
 }
-
-
-

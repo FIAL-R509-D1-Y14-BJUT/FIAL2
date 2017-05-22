@@ -34,7 +34,8 @@ public class BackPassword_1 extends AppCompatActivity {
             public void onClick(View v) {
                 //传递手机号给下一个界面
                 String a = edittext.getText().toString();
-                String retrievepassword = sendrequest_retrievepassword(a, password);
+                String ip = getResources().getString(R.string.back_supporter_ip);
+                String retrievepassword = sendrequest_retrievepassword(a, password,ip);
                 if (a.length() == 11) {
                     if (retrievepassword.equals("ok")) {
                         Intent intent = new Intent(BackPassword_1.this, BackPassword_2.class);//设置界面跳转

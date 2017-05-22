@@ -65,6 +65,7 @@ public class LoginActivity extends AppCompatActivity  {
                 else { Bstate = -1;}
                 if(Astate==1&&Bstate==1){
                     Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                    intent.putExtra("user_tel", user_name);
                     startActivity(intent);
                 }
                 else if(Astate==0){
@@ -125,7 +126,8 @@ public class LoginActivity extends AppCompatActivity  {
             public void run() {
                 try {
                     org.apache.http.client.HttpClient httpClient = new org.apache.http.impl.client.DefaultHttpClient();
-                    HttpGet httpGet = new HttpGet("http://172.16.16.59:8080/FIAL2_backSupporter/Login?tel="+user_name);
+                    HttpGet httpGet = new HttpGet("http://" + getResources().getString(R.string.back_supporter_ip) + ":8080/FIAL2_backSupporter/Login?tel="+user_name);
+                    Log.d("gttp", "aa"+R.string.back_supporter_ip);
                     HttpResponse httpResponse = httpClient.execute(httpGet);
                     if (httpResponse.getStatusLine().getStatusCode() == 200){
                         HttpEntity entity = httpResponse.getEntity();

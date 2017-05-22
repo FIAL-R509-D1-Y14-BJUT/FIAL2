@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -55,7 +56,8 @@ public class BackPassword_3 extends Activity {
                     normalDialog.show();
                 }
                 else {
-                    String response = SendRequest.sendRequest_signup(Phonenumber, password);
+                    String ip = getResources().getString(R.string.back_supporter_ip);
+                    String response = SendRequest.sendrequest_retrievepassword(Phonenumber, password,ip);
                     switch(response){
                         case "success": {
                             AlertDialog.Builder normalDialog = new AlertDialog.Builder(BackPassword_3.this);
@@ -70,7 +72,10 @@ public class BackPassword_3 extends Activity {
                             // 创建实例并显示
                             normalDialog.show();
 
-                            finish();
+                            Intent intent = new Intent(BackPassword_3.this, MainActivity.class);
+                            intent.putExtra("message", "backPassword");
+                            intent.putExtra("user_tel", Phonenumber);
+                            startActivity(intent);
                             break;
                         }
                         case "fail": {
