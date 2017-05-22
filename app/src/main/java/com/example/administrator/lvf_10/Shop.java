@@ -59,11 +59,11 @@ public class Shop extends AppCompatActivity {
         for (int i = 0; i < 2; i++)
         {
             Drawable drawable_1 = getResources().getDrawable(
-                    R.drawable.shop_pic_ziluolan);
+                    R.drawable.pic_ziluolan);
             Drawable drawable_2 = getResources().getDrawable(
-                    R.drawable.shop_text_ziluolan);
+                    R.drawable.text_ziluolan);
             Drawable drawable_3 = getResources().getDrawable(
-                    R.drawable.shop_text_9);
+                    R.drawable.text_9);
             DataItem item = new DataItem();
             item.drawable_flower = drawable_1;
             item.drawable_name = drawable_2;
@@ -97,7 +97,10 @@ public class Shop extends AppCompatActivity {
         });
     }
 public void jump(View v){
+    Bundle bundle = this.getIntent().getExtras();
+    String tel = bundle.getString("user_tel");
     Intent intent = new Intent(Shop.this, Goods.class);
+    intent.putExtra("user_tel", tel);
     startActivity(intent);
 }
     public void next(View v) {

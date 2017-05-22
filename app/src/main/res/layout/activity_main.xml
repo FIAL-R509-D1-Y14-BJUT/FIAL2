@@ -1,96 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
     tools:context="com.example.administrator.lvf_10.MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageButton
-            android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="336dp"
+        android:layout_height="442dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/viewGroup"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_compass"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"></LinearLayout>
+    </RelativeLayout>
+
+
+    <!--<ImageView
+        android:id="@+id/imageView"
+        android:layout_width="336dp"
+        android:layout_height="442dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495"
+        app:srcCompat="@drawable/timg2" />-->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="343dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.52">
+
+        <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_weight="1"
-            android:background="@color/colorTransparent"/>
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_weight="0.99"
+            android:background="@color/colorTransparent"
+            android:src="@drawable/main_button_normal_temperature"
+            tools:layout_editor_absoluteX="64dp"
+            tools:layout_editor_absoluteY="90dp" />
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_upload_you_tube"
             android:id="@+id/imageButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
             android:layout_weight="1"
-            android:background="@color/colorTransparent"/>
+            android:background="@color/colorTransparent"
+            android:src="@drawable/main_button_normal_humidity"
+            tools:layout_editor_absoluteX="64dp"
+            tools:layout_editor_absoluteY="-10dp" />
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_recent_history"
             android:id="@+id/imageButton4"
-            android:layout_weight="1"
-            android:background="@color/colorTransparent"/>
-        <ImageButton
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_mapmode"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:background="@color/colorTransparent"
+            android:src="@drawable/main_button_normal_sunshine"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="158dp" />
+
+        <ImageButton
             android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
             android:layout_weight="1"
-            android:background="@color/colorTransparent"/>
+            android:background="@color/colorTransparent"
+            android:src="@drawable/main_button_normal_manure"
+            tools:layout_editor_absoluteX="187dp"
+            tools:layout_editor_absoluteY="-49dp" />
+
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="273dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="273dp"
+        android:background="@color/colorTransparent"
+        android:src="@drawable/main_button_plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageButton
+        android:id="@+id/jiaoshui"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="0.99"
+        android:background="@color/colorTransparent"
+        android:src="@drawable/main_button_watering"
+        android:text="浇水"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton6" />
+
+    <ImageButton
+        android:id="@+id/btA"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="-9dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorTransparent"
+        android:src="@drawable/main_button_flower"
+        android:text="商店"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton6" />
+
+    <ImageButton
+        android:id="@+id/btB"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-33dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorTransparent"
+        android:src="@drawable/main_button_setting"
+        android:text="个人设置"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btA" />
+
+    <!--
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/main_activity_floatingactionbuttom"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:clickable="true"
+        app:fabSize="normal"
+        app:srcCompat="@mipmap/button_plus"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="567dp" />
+-->
+</android.support.constraint.ConstraintLayout>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/timg3"
-            android:id="@+id/imageView"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_media_previous"
-            android:id="@+id/imageButton7"
-            android:background="@color/colorTransparent"/>
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_media_next"
-            android:id="@+id/imageButton8"
-            android:background="@color/colorTransparent"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="right">
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_add"
-            android:id="@+id/imageButton6"
-            android:background="@color/colorTransparent"/>
-    </LinearLayout>
-</LinearLayout>
+    <!--</LinearLayout>-->

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">LvF_1.0</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="back_supporter_ip">10.27.49.229</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -19,6 +20,44 @@
     <string name="shop">"商店"</string>
     <string name="button_buy">点击领养</string>
     <string name="button_back">返回</string>
+    <string name="login_password">请输入密码</string>
+    <string name="login_sign_in">请输入手机号</string>
+    <string name="IndividualsAndSetting">个人设置</string>
+    <string name="order">交易明细</string>
 
+	<!-- Strings related to goods -->
+	 <string name="goods_siluolan_detail"><b>形态特征</b>\n
+二年生或多年生草本，高达60厘米。茎直立，多分枝。叶片长圆形或匙形。\n
+总状花序顶生和腋生，花多数，较大，花序轴果期伸长萼片呈囊状，边缘膜质，白色透明；花瓣紫红、淡红或白色，近卵形\n
+\n<b><center>生长习性</center></b>\n
+喜冷凉的气候，忌燥热。\n
+喜通风良好的环境。\n
+生长适温白天15-18℃，夜间10℃左右。\n
+对土壤要求不严，但在排水良好、中性偏碱的土壤中生长较好。\n
+紫罗兰耐寒不耐阴，怕渍水。\n
+它适生于位置较高，在霉雨天气炎热而通风不良时则易受病虫危害。\n
+施肥不宜过多，否则对开花不利。\n
+光照和通风如果不充分，易患病虫害。\n
+\n<b>植物分布</b>\n
+原产欧洲南部及地中海沿岸。\n
+中国南方大城市中常有引种，北方栽于庭园花坛或温室中，供观赏。\n
+\n<b>紫罗兰价值</b>\n
+紫罗兰花朵茂盛，花色鲜艳，香气浓郁，花期长，花序也长为众多爱花者所喜爱，适宜于盆栽观赏。\n
+紫罗兰能够清热解毒，美白祛斑，滋润皮肤，除皱消斑，增强光泽，防紫外线照射。\n
+对呼吸道的帮助很大，对支气管炎也有调理之效。\n
+还可以润喉，以及解决因蛀牙引起的口腔异味。\n
+\n<b>紫罗兰植物文化</b>\n
+紫罗兰的花语：永恒的美与爱；质朴，美德，盛夏的清凉。\n
+紫罗兰（蓝色）：警戒，忠诚，我将永远忠诚。\n
+紫罗兰（白色）：让我们抓住幸福的机会吧。\n
+紫罗兰（紫色）：在梦境中爱上你，对我而言你永远那么美。\n
+同时，紫罗兰也是金牛座的幸运花。\n
+</string>
+    <string name="goods_button">立即购买</string>
+	<string name="goods_request_NoFlower">不存在此类花朵</string>
+    <string name="goods_request_success">您已成功购买花朵</string>
+    <string name="goods_request_NoMoney">抱歉，您没有足够的钱支付</string>
+    <string name="goods_request_Addhx_ownFail">插入用户花朵表失败</string>
+    <string name="goods_request_Addhx_recordFail">插入记录表失败</string>
 
 </resources>
